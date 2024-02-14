@@ -9,13 +9,13 @@ class CategoryController extends Controller
 {
     function index() {
         $categories = Category::all();
-        return view('admin\category\index', [
+        return view('admin/category/index', [
             'categories'=> $categories
         ]);
     }
 
     function create() {
-        return view('admin\category\create');
+        return view('admin/category/create');
     }
 
     function insert(Request $request)  {
@@ -35,12 +35,12 @@ class CategoryController extends Controller
             'image'=>$image
         ]);
 
-        return redirect('admin\category');
+        return redirect('admin/category');
     }
 
     function edit($id) {
         $category = Category::find($id);
-        return view('admin\category\edit', [
+        return view('admin/category/edit', [
             'category'=>$category
         ]);
     }
@@ -72,11 +72,11 @@ class CategoryController extends Controller
             Category::find($id)->update($request->all());
         }
 
-        return redirect('admin\category');
+        return redirect('admin/category');
     }
 
     function delete($id) {
         Category::find($id)->delete();
-        return redirect('admin\category');
+        return redirect('admin/category');
     }
 }
