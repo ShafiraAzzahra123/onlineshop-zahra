@@ -85,7 +85,7 @@
         <div class="col-4 mt-2">
           <div class="highlighted-kategori" >
             <div style="background: linear-gradient(rgba(0,0,0,) rgba(0,0,0,))">
-              <img src="storage/{{$item->image}}" alt="..." height="250px;" >
+              <img src="/storage/{{$item->image}}" alt="..." height="250px;" >
             </div>
             <b><a href="/category/{{$item->address}}">{{$item->name}}</a></b>
           </div>
